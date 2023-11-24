@@ -1,8 +1,8 @@
-import HomeLogic from '../home/HomeLogic';
+import SearchLogic from '../search/SearchLogic';
 import '../../assets/styles/search.css';
 
 const Home = () => (
-  <div className="main_home">
+  <div className="main_search">
     <SearchLogic />
   </div>
 );

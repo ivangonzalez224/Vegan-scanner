@@ -1,0 +1,8 @@
+.main_home {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  margin-top: 2%;
+  box-sizing: border-box;
+}
