@@ -20,7 +20,7 @@ const initialState = {
   productItems: [],
   error: '',
 };
-const driversSlice = createSlice({
+const productsSlice = createSlice({
   name: 'product',
   initialState,
   reducers: {

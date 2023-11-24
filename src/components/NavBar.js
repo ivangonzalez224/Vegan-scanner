@@ -8,8 +8,10 @@ const NavBar = () => (
       <li id="nav_left">
         <NavLink to="/">ᐸ</NavLink>
       </li>
-      <li>
-        <BsUpcScan style={{ color: '#fff' }} />
+    </ul>
+    <ul id="nav-rigth">
+      <li id="scan-list">
+        <BsUpcScan id="scan-btn" style={{ color: '#fff' }} />
       </li>
       <li>
         <NavLink to="/products"><BsSearch style={{ color: '#fff' }} /></NavLink>

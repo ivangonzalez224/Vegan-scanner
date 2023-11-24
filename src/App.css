@@ -1,14 +1,17 @@
 body {
   width: 100vw;
   height: 100vh;
+  display: flex;
   padding: 0;
   overflow-x: hidden;
   background-color: #fafafa;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .main-container {
   width: 100%;
-  background-color: #2b2226;
+  background-color: #fff;
   max-width: 765px;
   display: flex;
   flex-direction: column;
@@ -18,6 +21,6 @@ body {
 
 section {
   width: 100%;
-  background-color: #ec4c8b;
+  background-color: #fff;
   max-width: 765px;
 }
