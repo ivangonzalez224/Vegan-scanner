@@ -5,15 +5,14 @@ import { BsUpcScan, BsSearch } from 'react-icons/bs';
 const NavBar = () => (
   <nav>
     <ul>
-      <li>
+      <li id="nav_left">
         <NavLink to="/">ᐸ</NavLink>
       </li>
       <li>
         <BsUpcScan style={{ color: '#fff' }} />
       </li>
       <li>
-        <NavLink to="/search"><BsSearch style={{ color: '#fff' }} /></NavLink>
-
+        <NavLink to="/products"><BsSearch style={{ color: '#fff' }} /></NavLink>
       </li>
     </ul>
   </nav>

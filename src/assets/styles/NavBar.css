@@ -2,4 +2,37 @@ nav {
   width: 100%;
   color: #fff;
   height: 48px;
+  background-color: #6cac9e;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  padding: 1%;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+nav ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 2%;
+}
+
+nav ul #nav_left {
+  width: 10%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+a {
+  margin-right: 10%;
+}
+
+.active {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
 }
