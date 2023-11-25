@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
 
-const ProductsItem = ({ productName }) => {
-  const dispatch = useDispatch();
-
-  return (
+const ProductsItem = (
+  {
+    productName, productId,
+  }
+) => (
     <div>
-      <span>{productName}</span>
+      <span className="product-name">{productName}</span>
     </div>
   );
-};
 
 ProductsItem.propTypes = {
   productName: PropTypes.string.isRequired,
+  productId: PropTypes.string.isRequired,
 };
 
 export default ProductsItem;
