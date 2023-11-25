@@ -2,11 +2,13 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkProduct } from '../../redux/products/ProductsSlice';
 
-const ProductsItem = () => {
+const ProductsItem = ({ productName }) => {
   const dispatch = useDispatch();
 
   return (
-    <li />
+    <div>
+      <span>{productName}</span>
+    </div>
   );
 };
 
