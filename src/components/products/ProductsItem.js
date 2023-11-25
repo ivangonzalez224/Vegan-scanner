@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
-import { checkProduct } from '../../redux/products/ProductsSlice';
+import { useDispatch } from 'react-redux';
 
 const ProductsItem = ({ productName }) => {
   const dispatch = useDispatch();
@@ -10,6 +9,10 @@ const ProductsItem = ({ productName }) => {
       <span>{productName}</span>
     </div>
   );
+};
+
+ProductsItem.propTypes = {
+  productName: PropTypes.string.isRequired,
 };
 
 export default ProductsItem;
