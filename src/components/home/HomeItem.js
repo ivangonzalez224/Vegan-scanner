@@ -1,11 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
-
-const HomeItem = () => {
-  const dispatch = useDispatch();
-
-  return (
-    <li />
-  );
-};
+const HomeItem = () => (
+  <li />
+);
 
 export default HomeItem;
