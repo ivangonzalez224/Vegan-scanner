@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
-import { checkProduct } from '../../redux/products/ProductsSlice';
 
-const ProductsItem = () => {
-  const dispatch = useDispatch();
+const ProductsItem = (
+  {
+    productName, productId,
+  },
+) => (
+  <div className="product-container">
+    <span className="product-name">{productName}</span>
+  </div>
+);
 
-  return (
-    <li />
-  );
+ProductsItem.propTypes = {
+  productName: PropTypes.string.isRequired,
+  productId: PropTypes.number.isRequired,
 };
 
 export default ProductsItem;
