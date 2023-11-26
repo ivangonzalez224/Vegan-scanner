@@ -8,7 +8,7 @@ const ProductsItem = (
 ) => (
   <div className="product-container">
     <NavLink
-      to={`/details/${productId.replace(' ', '_')}`}
+      to={`/details/${productId}`}
     >
       <span className="product-name">{productName}</span>
     </NavLink>

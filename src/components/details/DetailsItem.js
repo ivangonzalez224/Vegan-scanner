@@ -1,5 +1,5 @@
 const DetailsItem = () => (
-  <li />
+  <h1>Details Item</h1>
 );
 
 export default DetailsItem;
