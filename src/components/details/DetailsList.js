@@ -14,7 +14,7 @@ const DetailsList = () => {
   const tagProduct1 = descriptionArr[1];
   const tagProduct2 = descriptionArr[2];
   const ingredientsArr = descriptionArr[3].split('??');
-  const ingreMap = ingredientsArr.map((ingredient) => <span key={ingredient} className="ingredient-item">{ingredient}</span>);
+  const ingreMap = ingredientsArr.map((ingredient) => <div className="ingredient-container"><span key={ingredient} className="ingredient-item">{ingredient}</span></div>);
 
   return (
     <div className="details-main">

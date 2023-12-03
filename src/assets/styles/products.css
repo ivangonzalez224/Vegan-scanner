@@ -9,3 +9,8 @@
   padding: 2% 1%;
   border-bottom: #aaa solid 1px;
 }
+
+a{
+  text-decoration: none;
+  color: #000;
+}
