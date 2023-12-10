@@ -22,11 +22,7 @@ const initialState = {
 const productsSlice = createSlice({
   name: 'product',
   initialState,
-  reducers: {
-    checkProduct: (state, action) => {
-
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getProducts.fulfilled, (state, action) => {
       state.productItems = action.payload;

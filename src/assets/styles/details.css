@@ -1,3 +1,45 @@
-ul {
+.ingredient-listItems {
   display: flex;
+  flex-direction: column;
+}
+
+.ingredient-red {
+  color: #f00;
+}
+
+.ingredient-blue {
+  color: #00f;
+}
+
+.details-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% 1%;
+}
+
+.details-tags {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 0;
+  border: #ff0987 solid 3px;
+  box-sizing: border-box;
+  gap: 20%;
+}
+
+.details-tags img {
+  width: 21%;
+}
+
+.details-top img {
+  width: 14%;
+  margin-right: 3%;
+}
+
+.details-main p {
+  border-bottom: #aaa solid 1px;
+  font-weight: 600;
+  padding: 2%;
 }

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 const ProductsItem = (
   {
@@ -6,7 +7,11 @@ const ProductsItem = (
   },
 ) => (
   <div className="product-container">
-    <span className="product-name">{productName}</span>
+    <NavLink
+      to={`/details/${productId}`}
+    >
+      <span className="product-name">{productName}</span>
+    </NavLink>
   </div>
 );
 
