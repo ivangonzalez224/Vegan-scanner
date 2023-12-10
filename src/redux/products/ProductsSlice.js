@@ -6,7 +6,7 @@ export const getProducts = createAsyncThunk(
   async (arg, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        'https://script.google.com/macros/s/AKfycbxIMqJNOq4r9UfHxKzdKdEHJbe08tMIw625MVhGvBOUXfBho-JxjMkcf_eHknLDGF532w/exec',
+        ' ',
       );
       const endData = response.data.data;
       return endData;
@@ -22,11 +22,7 @@ const initialState = {
 const productsSlice = createSlice({
   name: 'product',
   initialState,
-  reducers: {
-    checkProduct: (state, action) => {
-
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getProducts.fulfilled, (state, action) => {
       state.productItems = action.payload;
