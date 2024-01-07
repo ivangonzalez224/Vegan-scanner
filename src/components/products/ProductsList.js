@@ -4,6 +4,7 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import ProductsItem from './ProductsItem';
 import { getProducts } from '../../redux/products/ProductsSlice';
+import '../../assets/styles/products.css';
 
 const ProductsList = () => {
   const dispatch = useDispatch();
@@ -33,12 +34,17 @@ const ProductsList = () => {
 
   return (
     <div className="product-listItems">
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Busca productos..."
-      />
+      <div className="search-main">
+        <div className="search-container">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Busca productos..."
+          />
+          <button id="search-closeBtn" type="button" onClick={() => setFilterEstado('apto')}>X</button>
+        </div>
+      </div>
       <button type="button" onClick={() => setFilterEstado('apto')}>Apto</button>
       <button type="button" onClick={() => setFilterEstado('noApto')}>No Apto</button>
       <button type="button" onClick={() => setFilterEstado('all')}>All</button>

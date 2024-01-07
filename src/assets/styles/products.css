@@ -1,8 +1,33 @@
 .product-listItems {
   display: flex;
   flex-direction: column;
-  margin-top: 3%;
+  align-items: center;
   border-top: #aaa solid 1px;
+}
+
+.search-main {
+  width: 100%;
+  padding: 3%;
+  background-color: #6cac9e;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.search-container {
+  padding: 1% 2%;
+  width: 70%;
+  background-color: #fff;
+  border-radius: 9px;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+}
+
+#search-closeBtn {
+  background-color: #6cac9e00;
+  border: none;
+  color: #aaa;
 }
 
 .product-container {
@@ -13,4 +38,13 @@
 a {
   text-decoration: none;
   color: #000;
+}
+
+.product-listItems input {
+  width: 70%;
+  background-color: #fff;
+  border-radius: 9px;
+  border: none;
+  outline: none;
+  padding: 1% 2%;
 }
