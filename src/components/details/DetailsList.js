@@ -57,11 +57,9 @@ const DetailsList = () => {
       </div>
       <div className="top-ingredients">
         <p>Ingredientes</p>
-        <button
-          type="button"
-        >
-          ver recomendación
-        </button>
+        {newProducts[0].estado === 'apto' && (
+          <button type="button">ver recomendación</button>
+        )}
       </div>
       <div className="ingredient-listItems">
         {ingreMap}
