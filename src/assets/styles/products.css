@@ -1,7 +1,6 @@
 .product-listItems {
   display: flex;
   flex-direction: column;
-  align-items: center;
   border-top: #aaa solid 1px;
 }
 
@@ -32,10 +31,11 @@
 }
 
 .filterBtn-conatiner {
-  width: 70%;
-  padding: 2%;
+  width: 100%;
+  padding: 2% 15%;
   display: flex;
   justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 .filterBtn-conatiner button {
@@ -64,7 +64,8 @@
 }
 
 .product-container {
-  padding: 3% 1%;
+  padding: 3% 3%;
+  font-size: 15px;
   border-bottom: #aaa solid 1px;
 }
 

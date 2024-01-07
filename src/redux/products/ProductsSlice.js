@@ -6,7 +6,7 @@ export const getProducts = createAsyncThunk(
   async (arg, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        ' ',
+        'https://script.google.com/macros/s/AKfycbyoa05cltxTJMeMuJV6n85OXIe_kMNbeP0v3kPDteIl0DGCIGPKx5UWvH-IQQQV6cLq/exec',
       );
       const endData = response.data.data;
       return endData;

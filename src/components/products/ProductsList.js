@@ -20,7 +20,7 @@ const ProductsList = () => {
       )
       : productItems;
 
-    if (filterEstado && filterEstado !== 'all') {
+    if (filterEstado && filterEstado !== 'todo') {
       return baseFilter.filter((product) => product.estado === filterEstado);
     }
 

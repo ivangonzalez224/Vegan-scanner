@@ -24,13 +24,12 @@
   justify-content: center;
   align-items: center;
   margin: 3% 0;
-  border: #ff0987 solid 3px;
   box-sizing: border-box;
   gap: 20%;
 }
 
 .details-tags img {
-  width: 21%;
+  width: 19%;
 }
 
 .details-top img {
@@ -38,8 +37,16 @@
   margin-right: 3%;
 }
 
-.details-main p {
+.top-ingredients {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: #aaa solid 1px;
+  box-sizing: border-box;
+}
+
+.details-main p {
   font-weight: 600;
   padding: 2%;
 }

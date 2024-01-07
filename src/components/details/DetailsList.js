@@ -55,7 +55,14 @@ const DetailsList = () => {
         <img src={tagProduct1} alt="Product tag" />
         <img src={tagProduct2} alt="Product tag" />
       </div>
-      <p>Ingredients</p>
+      <div className="top-ingredients">
+        <p>Ingredientes</p>
+        <button
+          type="button"
+        >
+          recomendación nutricional
+        </button>
+      </div>
       <div className="ingredient-listItems">
         {ingreMap}
       </div>
