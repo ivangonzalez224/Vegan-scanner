@@ -26,6 +26,10 @@ const ProductsList = () => {
     return baseFilter;
   }, [productItems, searchQuery, filterEstado]);
 
+  const handleCloseSearch = () => {
+    setSearchQuery('');
+  };
+
   useEffect(() => {
     if (productItems.length === 0) {
       dispatch(getProducts());
@@ -42,7 +46,7 @@ const ProductsList = () => {
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Busca productos..."
           />
-          <button id="search-closeBtn" type="button" onClick={() => setFilterEstado('apto')}>X</button>
+          <button id="search-closeBtn" type="button" onClick={handleCloseSearch}>X</button>
         </div>
       </div>
       <button type="button" onClick={() => setFilterEstado('apto')}>Apto</button>
