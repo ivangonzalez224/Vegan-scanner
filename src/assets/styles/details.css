@@ -44,9 +44,19 @@
   align-items: center;
   border-bottom: #aaa solid 1px;
   box-sizing: border-box;
+  padding: 1% 3%;
+}
+
+.top-ingredients button {
+  border: #6cac9e solid 1px;
+  color: #6cac9e;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 1% 3%;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .details-main p {
   font-weight: 600;
-  padding: 2%;
 }

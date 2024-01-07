@@ -60,7 +60,7 @@ const DetailsList = () => {
         <button
           type="button"
         >
-          recomendación nutricional
+          ver recomendación
         </button>
       </div>
       <div className="ingredient-listItems">
