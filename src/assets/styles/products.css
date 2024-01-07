@@ -28,6 +28,39 @@
   background-color: #6cac9e00;
   border: none;
   color: #aaa;
+  cursor: pointer;
+}
+
+.filterBtn-conatiner {
+  width: 70%;
+  padding: 2%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.filterBtn-conatiner button {
+  background-color: #fff;
+  border: #6cac9e solid 1px;
+  color: #6cac9e;
+  margin-right: 5%;
+  border-radius: 9px;
+  padding: 1% 2%;
+  cursor: pointer;
+}
+
+#filterBtn-todo {
+  background-color: #6cac9e;
+  color: #fff;
+}
+
+.filter-btn {
+  background-color: #fff;
+  color: #6cac9e;
+}
+
+.filter-btn.active {
+  background-color: #6cac9e;
+  color: #fff;
 }
 
 .product-container {

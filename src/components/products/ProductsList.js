@@ -11,6 +11,7 @@ const ProductsList = () => {
   const { productItems } = useSelector((store) => store.products);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterEstado, setFilterEstado] = useState('');
+  const [activeFilterBtn, setActiveFilterBtn] = useState('filterBtn-todo');
 
   const filteredProducts = useMemo(() => {
     const baseFilter = searchQuery
@@ -28,6 +29,11 @@ const ProductsList = () => {
 
   const handleCloseSearch = () => {
     setSearchQuery('');
+  };
+
+  const handleFilterClick = (id) => {
+    setFilterEstado(id.replace('filterBtn-', ''));
+    setActiveFilterBtn(id);
   };
 
   useEffect(() => {
@@ -49,9 +55,30 @@ const ProductsList = () => {
           <button id="search-closeBtn" type="button" onClick={handleCloseSearch}>X</button>
         </div>
       </div>
-      <button type="button" onClick={() => setFilterEstado('apto')}>Apto</button>
-      <button type="button" onClick={() => setFilterEstado('noApto')}>No Apto</button>
-      <button type="button" onClick={() => setFilterEstado('all')}>All</button>
+      <div className="filterBtn-conatiner">
+        <button
+          className={`filter-btn ${activeFilterBtn === 'filterBtn-todo' ? 'active' : ''}`}
+          type="button"
+          onClick={() => handleFilterClick('filterBtn-todo')}
+        >
+          Todo
+        </button>
+        <button
+          className={`filter-btn ${activeFilterBtn === 'filterBtn-apto' ? 'active' : ''}`}
+          type="button"
+          onClick={() => handleFilterClick('filterBtn-apto')}
+        >
+          Apto
+        </button>
+        <button
+          className={`filter-btn ${activeFilterBtn === 'filterBtn-noApto' ? 'active' : ''}`}
+          type="button"
+          onClick={() => handleFilterClick('filterBtn-noApto')}
+        >
+          No Apto
+        </button>
+      </div>
+
       {filteredProducts.map((product) => (
         <ProductsItem
           key={product.id}
