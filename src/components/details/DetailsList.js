@@ -1,10 +1,11 @@
-import { React } from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 const DetailsList = () => {
   const { productId } = useParams();
   const { productItems } = useSelector((store) => store.products);
+  const [showRecommendation, setShowRecommendation] = useState(false);
 
   const productIdNum = parseInt(productId, 10);
   const newProducts = productItems.filter((item) => item.id === productIdNum);
@@ -51,19 +52,57 @@ const DetailsList = () => {
           <h3>{nomProduct}</h3>
         </div>
       </div>
-      <div className="details-tags">
-        <img src={tagProduct1} alt="Product tag" />
-        <img src={tagProduct2} alt="Product tag" />
-      </div>
-      <div className="top-ingredients">
-        <p>Ingredientes</p>
-        {newProducts[0].estado === 'apto' && (
-          <button type="button">ver recomendación</button>
-        )}
-      </div>
-      <div className="ingredient-listItems">
-        {ingreMap}
-      </div>
+      {!showRecommendation && (
+        <>
+          <div className="details-tags">
+            <img src={tagProduct1} alt="Product tag" />
+            <img src={tagProduct2} alt="Product tag" />
+          </div>
+          <div className="top-ingredients">
+            <p>Ingredientes</p>
+            {newProducts[0].estado === 'apto' && (
+              <button
+                type="button"
+                onClick={() => setShowRecommendation(true)}
+              >
+                ver recomendación
+              </button>
+            )}
+          </div>
+          <div className="ingredient-listItems">
+            {ingreMap}
+          </div>
+        </>
+      )}
+      {showRecommendation && (
+        <div className="recommendation-main">
+          <button className="recom-backBtn" type="button" onClick={() => setShowRecommendation(false)}>ver ingredientes</button>
+          <div className="recommendation-item">
+            <img src="{newProducts[0].recom_img}" alt="nutritional recommendation icon" />
+            <span id="recommendation-title">{newProducts[0].recomendacion}</span>
+          </div>
+          <div className="recommendation-item">
+            <span>- Sodio</span>
+            <div>{newProducts[0].sodio}</div>
+          </div>
+          <div className="recommendation-item">
+            <span>- Azúcares</span>
+            <div>{newProducts[0].azucar}</div>
+          </div>
+          <div className="recommendation-item">
+            <span>- Aditivos</span>
+            <div>{newProducts[0].aditivos}</div>
+          </div>
+          <div className="recommendation-item">
+            <span>- Proteínas</span>
+            <div>{newProducts[0].proteinas}</div>
+          </div>
+          <div className="recommendation-item">
+            <span>- Fortificado</span>
+            <div>{newProducts[0].fortificado}</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
