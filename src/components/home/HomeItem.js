@@ -1,8 +1,9 @@
+import BackImg from '../../assets/images/backScan.png';
+
 const HomeItem = () => (
   <div className="land-main">
-    <img alt="landing logo" src="" />
-    <p>Scan a bar or QR code</p>
-    <button className="land-scan-btn" type="button">Scan</button>
+    <img alt="landing logo" src={BackImg} />
+    <button className="land-scan-btn" type="button">Scan a code</button>
   </div>
 );
 
