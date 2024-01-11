@@ -36,6 +36,11 @@ nav ul #nav_left {
   align-items: center;
 }
 
+#nav_left img {
+  width: 100%;
+  border-radius: 100px;
+}
+
 #scan-list {
   margin-right: 9%;
 }

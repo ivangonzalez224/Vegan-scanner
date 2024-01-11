@@ -1,12 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import '../assets/styles/NavBar.css';
 import { BsUpcScan, BsSearch } from 'react-icons/bs';
+import homelogo from '../assets/images/homeLogo.png';
 
 const NavBar = () => (
   <nav>
     <ul>
       <li id="nav_left">
-        <NavLink to="/">ᐸ</NavLink>
+        <NavLink to="/"><img src={homelogo} alt="Logo" /></NavLink>
       </li>
     </ul>
     <ul id="nav-rigth">
